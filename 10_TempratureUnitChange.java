@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class TempratureUnitChange {
+class TempratureUnitChange {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

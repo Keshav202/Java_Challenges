@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class AreaOfTriangle {
+class AreaOfTriangle {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the Valur of 'Base' of the Triangle : ");
