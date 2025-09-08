@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class AgeGroups {
+class AgeGroups {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
