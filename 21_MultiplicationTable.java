@@ -15,4 +15,28 @@ class MultiplicationTable {
         return num;
 
     }
+
+    static class TableUsingWhileLoop {
+        public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("This is a Table....");
+            int num = table(input);
+            int table = table(input);
+            System.out.println("Here is the table of " + num + " : \n" + table);
+
+        }
+        public static int table(Scanner input){
+            System.out.print("Enter the Number : ");
+            int num = input.nextInt();
+
+            int table = 1;
+
+            while (table <= 10){
+                System.out.println(num*table);
+                table++;
+            }
+
+            return table;
+        }
+    }
 }
