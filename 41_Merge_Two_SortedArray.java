@@ -3,12 +3,29 @@ class Merge_Two_SortedArray {
         int[] arr1 = ArrayUtility.inputArray();
         int[] arr2 = ArrayUtility.inputArray();
 
-        int[] MergeArray = isSorted(arr1, arr2);
-        System.out.println("\nHere is the New Merged Array");
-        ArrayUtility.displayArray(MergeArray);
+        if (!isSorted(arr1) || !isSorted(arr2)){
+            System.out.println("Array is Not Sorted. Please Enter a Sorted Array!");
+        }else {
+            int[] MergeArray = NewMergeArr(arr1, arr2);
+            System.out.println("\nHere is the New Merged Array");
+            ArrayUtility.displayArray(MergeArray);
+        }
 
     }
-    public static int[] isSorted(int[] arr1, int[] arr2){
+
+    public static boolean isSorted(int[] arr){
+        int i = 0;
+        while (i < arr.length-1){
+            if (arr[i] > arr[i+1]){
+                return false;
+            }
+            i++;
+        }
+
+        return true;
+    }
+
+    public static int[] NewMergeArr(int[] arr1, int[] arr2){
 
         int n1 = arr1.length;
         int n2 = arr2.length;
