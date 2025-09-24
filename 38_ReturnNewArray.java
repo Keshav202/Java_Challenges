@@ -1,63 +1,50 @@
 import java.util.Scanner;
 class ReturnNewArray {
-    public static int[] deleteElement(int[] arr, int element) {
-        int count = 0;
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
 
-        // Count how many times element occurs
-        for (int num : arr) {
-            if (num == element) {
+        int[] Arr = ArrayUtility.inputArray();
+
+        System.out.print("Enter the No. you want to delete : ");
+        int numToDel = input.nextInt();
+
+        int[] returnArray = deleteNum(Arr, numToDel);
+        System.out.println("Here is your New Array");
+        ArrayUtility.displayArray(returnArray);
+
+    }
+
+    public static int[] deleteNum(int[] Arr, int numToDel){
+
+        int count = 0;
+        int i = 0;
+        while(i < Arr.length ){
+            if (Arr[i] == numToDel){
                 count++;
             }
+            i++;
         }
 
-        // If element not found, return original array
-        if (count == 0) {
-            System.out.println("Element not found in array.");
-            return arr;
+        if (count == 0){
+            System.out.println("Number is not found in the Array.");
+            return Arr;
         }
 
-        // Create new array with reduced size
-        int[] newArr = new int[arr.length - count];
-        int index = 0;
+        int[] resultArray = new int[Arr.length - count];
 
-        // Copy only elements that are not equal to 'element'
-        for (int num : arr) {
-            if (num != element) {
-                newArr[index++] = num;
+        int j = 0;
+        int k = 0;
+
+        while(j < Arr.length){
+            if (Arr[j] != numToDel){
+                resultArray[k] = Arr[j];
+                k++;
             }
+            j++;
         }
 
-        return newArr;
+        return resultArray;
+
     }
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-
-        // Input array size
-        System.out.print("Enter size of array: ");
-        int n = sc.nextInt();
-
-        int[] arr = new int[n];
-
-        // Input elements
-        System.out.println("Enter " + n + " elements:");
-        for (int i = 0; i < n; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        // Input element to delete
-        System.out.print("Enter element to delete: ");
-        int element = sc.nextInt();
-
-        // Call function
-        int[] result = deleteElement(arr, element);
-
-        // Print new array
-        System.out.println("Array after deletion:");
-        for (int num : result) {
-            System.out.print(num + " ");
-        }
-
-        sc.close();
-    }
 }
