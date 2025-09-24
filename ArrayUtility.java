@@ -25,7 +25,7 @@ public class ArrayUtility {
             System.out.print(arr[i] + " ");
             i ++;
         }
-        System.out.print("]");
+        System.out.print("]\n");
     }
 
 }
