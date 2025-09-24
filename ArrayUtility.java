@@ -4,7 +4,7 @@ public class ArrayUtility {
     public static int[] inputArray(){
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter the Size of an Array : ");
+        System.out.print("\nEnter the Size of an Array : ");
         int size = input.nextInt();
         int[] arr = new int[size];
 
