@@ -6,8 +6,9 @@ class SumAndAvg {
         int sum = sum(arr2D);
         System.out.print("\nSum of All elements in array is : " + sum);
 
-        int avg = sum / arr2D.length;
+        double avg = avg(arr2D);
         System.out.print("\nAverage is : " + avg);
+
 
     }
 
@@ -24,5 +25,19 @@ class SumAndAvg {
             i++;
         }
         return sum;
+    }
+
+    public static double avg(int[][] arr2D){
+
+        if (arr2D.length == 0){
+            return 0;
+        }
+
+        int row = arr2D.length;
+        int col = arr2D[0].length;
+
+        int size = row * col;
+
+        return sum(arr2D) / size;
     }
 }
