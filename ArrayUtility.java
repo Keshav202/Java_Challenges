@@ -18,6 +18,32 @@ public class ArrayUtility {
         return arr;
     }
 
+    public static int[][] input2DArray(){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("\nEnter Row for 2D Array : ");
+        int row = sc.nextInt();
+        System.out.print("Enter Colum for 2D Array : ");
+        int col = sc.nextInt();
+        System.out.println();
+
+        int[][] arr2D = new int[row][col];
+
+        int i = 0;
+        while (i < arr2D.length){
+            int j = 0;
+            while (j < arr2D[i].length){
+                System.out.print("Enter element for [" + i + "][" + j + "] : ");
+                arr2D[i][j] = sc.nextInt();
+                j++;
+            }
+            i++;
+        }
+
+        return arr2D;
+
+    }
+
     public static void displayArray(int[] arr){
         int i = 0;
         System.out.print("[");
