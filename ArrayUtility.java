@@ -30,9 +30,9 @@ public class ArrayUtility {
         int[][] arr2D = new int[row][col];
 
         int i = 0;
-        while (i < arr2D.length){
+        while (i < row){
             int j = 0;
-            while (j < arr2D[i].length){
+            while (j < col){
                 System.out.print("Enter element for [" + i + "][" + j + "] : ");
                 arr2D[i][j] = sc.nextInt();
                 j++;
